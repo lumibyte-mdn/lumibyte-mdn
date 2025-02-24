@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Lottie from "lottie-react";
 
 import branding from "@/public/svg/branding.svg"
 import uiux from "@/public/svg/uiux.svg"
@@ -10,6 +11,7 @@ import workshop from "@/public/svg/workshop.svg"
 import landingpage from "@/public/svg/landingpage.svg"
 import webs from "@/public/svg/website.svg"
 import bullet1 from "@/public/svg/bullet1.svg"
+import ani1 from "@/public/lottie/ani1.json"
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -21,12 +23,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { testimoni } from "@/libs/testimoni";
 import { gsap } from 'gsap';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Content() {
     const partners = partner
     const projects = project
     const testimonials = testimoni
+
+    const [isClient, setIsClient] = useState(false);
+
+    useEffect(() => {
+        setIsClient(true);
+    }, []);
 
     useEffect(() => {
         const counters = document.querySelectorAll('.counter');
@@ -81,12 +89,13 @@ export default function Content() {
                                 </div>
                             </div>
                             <div className="w-3/5 flex justify-end">
-                                {/* <Lottie
-                                    animationData={ani1}
-                                    autoplay
-                                    className="w-[620px] scale-110"
-                                >
-                                </Lottie> */}
+                                {isClient && (
+                                    <Lottie
+                                        animationData={ani1}
+                                        autoplay
+                                        className="w-[620px] scale-110"
+                                    />
+                                )}
                             </div>
                         </div>
                     </div>
