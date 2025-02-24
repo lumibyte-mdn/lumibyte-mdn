@@ -17,8 +17,8 @@ export default function Navigationbar() {
                             />
                         </div>
                         <div className="space-x-10">
-                            <Link href={""} className="text-[#183B56] font-semibold font-sans">Home</Link>
-                            <Link href={""} className="text-[#183B56] font-semibold font-sans">Project</Link>
+                            <Link href={"/"} className="text-[#183B56] font-semibold font-sans">Home</Link>
+                            <Link href={"/project"} className="text-[#183B56] font-semibold font-sans">Project</Link>
                             <Link href={""} className="text-[#183B56] font-semibold font-sans">Services</Link>
                             <Link href={""} className="text-[#183B56] font-semibold font-sans">Contact</Link>
                         </div>

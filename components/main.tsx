@@ -23,7 +23,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { testimoni } from "@/libs/testimoni";
 import { gsap } from 'gsap';
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const LottieNoSSR = dynamic(() => import('lottie-react'), {
     ssr: false, // Disable server-side rendering for this component
@@ -33,6 +33,8 @@ export default function Content() {
     const partners = partner
     const projects = project
     const testimonials = testimoni
+
+    const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
         const counters = document.querySelectorAll('.counter');
@@ -58,6 +60,31 @@ export default function Content() {
         });
     }, []);
 
+    // Handle scroll event
+    const handleScroll = () => {
+        if (window.scrollY > 300) {
+            setIsVisible(true);  // Show button when scrolling more than 300px
+        } else {
+            setIsVisible(false); // Hide button when at the top
+        }
+    };
+
+    // Scroll to top function
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth', // Smooth scrolling
+        });
+    };
+
+    // Add event listener on component mount
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     return (
         <>
             <section>
@@ -71,15 +98,16 @@ export default function Content() {
                                 <p className="font-sans text-base text-[#5A7184] mb-10 leading-relaxed">We build high-performance websites, custom web applications, and mobile apps to enhance user experience and drive growth.</p>
                                 <Link
                                     href={""}
-                                    className="font-bold bg-[#0a0cc3] text-white px-10 py-4 rounded-lg text-lg"
+                                    className="font-bold bg-[#0a0cc3] text-white px-10 py-4 rounded-lg text-lg hover:bg-blue-950"
                                 >
                                     See Our Portfolio
                                 </Link>
-                                <div className="flex mt-14 space-x-16 items-center">
+                                <div className="flex mt-14 space-x-12 items-center">
                                     <div className="flex items-center">
                                         <h1 className="font-ubuntu text-[#183B56] font-bold text-6xl me-4 counter" data-value="8">0</h1>
                                         <p className="font-ubuntu text-[#5A7184] text-base">Clients</p>
                                     </div>
+                                    <div className="w-0.5 h-10 bg-[#183B56] hidden lg:block md:block"></div>
                                     <div className="flex items-center">
                                         <h1 className="font-ubuntu text-[#183B56] font-bold text-6xl me-4 counter flex" data-value="10">0</h1>
                                         <p className="font-ubuntu text-[#5A7184] text-base">Website<br />Created</p>
@@ -157,7 +185,7 @@ export default function Content() {
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">SEO</h1>
-                                        <p className="text-base text-[#5A7184] leading-relaxed">We make logo and concept for your brand needs.</p>
+                                        <p className="text-base text-[#5A7184] leading-relaxed">Optimizing websites to rank higher on search engines.</p>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +198,7 @@ export default function Content() {
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">Website Application</h1>
-                                        <p className="text-base text-[#5A7184] leading-relaxed">We make logo and concept for your brand needs.</p>
+                                        <p className="text-base text-[#5A7184] leading-relaxed">Developing functional and responsive web applications.</p>
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +211,7 @@ export default function Content() {
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">UI/UX Design</h1>
-                                        <p className="text-base text-[#5A7184] leading-relaxed">We make logo and concept for your brand needs.</p>
+                                        <p className="text-base text-[#5A7184] leading-relaxed">Creating engaging interfaces and optimal user experiences.</p>
                                     </div>
                                 </div>
                             </div>
@@ -196,7 +224,7 @@ export default function Content() {
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">Mobile Development</h1>
-                                        <p className="text-base text-[#5A7184] leading-relaxed">We make logo and concept for your brand needs.</p>
+                                        <p className="text-base text-[#5A7184] leading-relaxed">Building mobile applications for Android and iOS.</p>
                                     </div>
                                 </div>
                             </div>
@@ -209,7 +237,7 @@ export default function Content() {
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">Landing Page</h1>
-                                        <p className="text-base text-[#5A7184] leading-relaxed">We make logo and concept for your brand needs.</p>
+                                        <p className="text-base text-[#5A7184] leading-relaxed">High-converting pages to boost your business.</p>
                                     </div>
                                 </div>
                             </div>
@@ -222,7 +250,7 @@ export default function Content() {
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">Tech Workshop</h1>
-                                        <p className="text-base text-[#5A7184] leading-relaxed">We make logo and concept for your brand needs.</p>
+                                        <p className="text-base text-[#5A7184] leading-relaxed">Training and workshops to enhance digital skills.</p>
                                     </div>
                                 </div>
                             </div>
@@ -266,7 +294,7 @@ export default function Content() {
                                         <div className="px-10 py-6">
                                             <p className="text-[#183B56] lg:text-2xl text-sm font-bold mb-1 font-grotesk">{project.title}</p>
                                             <p className="mb-2 lg:text-lg text-xs text-[#888888]">{project.country}</p>
-                                            <Link href={project.link} className="text-[#0a0cc3] text-lg">Visit site &rarr;</Link>
+                                            <Link href={project.link} className="text-[#0a0cc3] text-lg hover:text-[#183B56]">Visit site &rarr;</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -324,7 +352,7 @@ export default function Content() {
                         <p className="text-white text-lg">Send us your brief and tell your project too. We are ready to help all you need</p>
                         <Link
                             href={""}
-                            className="font-bold bg-white text-[#0a0cc3] px-10 py-3 rounded-lg text-lg mt-16"
+                            className="font-bold bg-white text-[#0a0cc3] px-10 py-3 rounded-lg text-lg mt-16 z-50"
                         >
                             Let&apos;s Discuss it!
                         </Link>
@@ -360,6 +388,14 @@ export default function Content() {
                     }              
                `}
             </style>
+
+            <button
+                onClick={scrollToTop}
+                className={`fixed bottom-28 right-10 bg-slate-800 text-white flex justify-center items-center w-12 h-12 shadow-lg transition-opacity rounded-full duration-300 ${isVisible ? 'opacity-100' : 'opacity-0'
+                    }`}
+            >
+                <p className="text-xl mb-2">↑</p>
+            </button>
         </>
     );
 }
