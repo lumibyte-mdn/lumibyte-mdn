@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import Lottie from "lottie-react";
 
-import down from "@/public/svg/downarrow.svg"
 import branding from "@/public/svg/branding.svg"
 import uiux from "@/public/svg/uiux.svg"
 import mobile from "@/public/svg/mobile.svg"
@@ -24,7 +23,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { testimoni } from "@/libs/testimoni";
 import { gsap } from 'gsap';
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 
 export default function Content() {
     const partners = partner
