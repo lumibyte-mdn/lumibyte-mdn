@@ -24,7 +24,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { testimoni } from "@/libs/testimoni";
 import { gsap } from 'gsap';
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 const LottieNoSSR = dynamic(() => import('lottie-react'), {
     ssr: false, // Disable server-side rendering for this component
@@ -34,12 +34,6 @@ export default function Content() {
     const partners = partner
     const projects = project
     const testimonials = testimoni
-
-    const [isClient, setIsClient] = useState(false);
-
-    useEffect(() => {
-        setIsClient(true);
-    }, []);
 
     useEffect(() => {
         const counters = document.querySelectorAll('.counter');
