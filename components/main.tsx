@@ -1,4 +1,5 @@
 "use client"
+/* eslint-disable no-unused-vars */
 
 import Image from "next/image";
 import Link from "next/link";
@@ -23,7 +24,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import { testimoni } from "@/libs/testimoni";
 import { gsap } from 'gsap';
-import { useEffect} from "react";
+import { useEffect } from "react";
 
 export default function Content() {
     const partners = partner
