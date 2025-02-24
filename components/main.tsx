@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Lottie from "lottie-react";
+import dynamic from 'next/dynamic';
 
 import branding from "@/public/svg/branding.svg"
 import uiux from "@/public/svg/uiux.svg"
@@ -24,6 +25,10 @@ import { Pagination } from 'swiper/modules';
 import { testimoni } from "@/libs/testimoni";
 import { gsap } from 'gsap';
 import { useEffect, useState } from "react";
+
+const LottieNoSSR = dynamic(() => import('lottie-react'), {
+    ssr: false, // Disable server-side rendering for this component
+});
 
 export default function Content() {
     const partners = partner
@@ -89,13 +94,11 @@ export default function Content() {
                                 </div>
                             </div>
                             <div className="w-3/5 flex justify-end">
-                                {isClient && (
-                                    <Lottie
-                                        animationData={ani1}
-                                        autoplay
-                                        className="w-[620px] scale-110"
-                                    />
-                                )}
+                                <LottieNoSSR
+                                    animationData={ani1}
+                                    autoplay
+                                    className="w-[620px] scale-110"
+                                />
                             </div>
                         </div>
                     </div>
