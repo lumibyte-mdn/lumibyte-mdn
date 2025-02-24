@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import Lottie from "lottie-react";
 
 import branding from "@/public/svg/branding.svg"
 import uiux from "@/public/svg/uiux.svg"
