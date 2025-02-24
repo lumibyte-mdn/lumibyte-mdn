@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import testi1 from "@/public/png/testi1.jpg"
 
 const testimoni = [
