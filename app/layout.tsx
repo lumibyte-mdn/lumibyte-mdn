@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Open_Sans, Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 import Navigationbar from "@/components/navigation";
+import Footer from "@/components/footer";
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       >
         <Navigationbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

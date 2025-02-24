@@ -11,15 +11,49 @@ import mobile from "@/public/svg/mobile.svg"
 import workshop from "@/public/svg/workshop.svg"
 import landingpage from "@/public/svg/landingpage.svg"
 import webs from "@/public/svg/website.svg"
+import bullet1 from "@/public/svg/bullet1.svg"
 import ani1 from "@/public/lottie/ani1.json"
+
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 import { partner } from "@/libs/partners";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { project } from "@/libs/project";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
+import { testimoni } from "@/libs/testimoni";
+import { gsap } from 'gsap';
+import { useEffect, useState } from "react";
 
 export default function Content() {
     const partners = partner
     const projects = project
+    const testimonials = testimoni
+
+    useEffect(() => {
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach((counter) => {
+            // Persempit tipe elemen menjadi HTMLElement
+            const element = counter as HTMLElement;
+
+            const endValue = parseInt(element.dataset.value || '0', 10);
+
+            gsap.fromTo(
+                element,
+                { innerText: 0 },
+                {
+                    innerText: endValue,
+                    duration: 2, // durasi animasi (detik)
+                    ease: 'power2.out',
+                    snap: { innerText: 1 },
+                    onUpdate: function () {
+                        element.innerText = Math.ceil(parseFloat(element.innerText || '0')).toString(); // Menampilkan angka bulat
+                    },
+                }
+            );
+        });
+    }, []);
 
     return (
         <>
@@ -29,22 +63,25 @@ export default function Content() {
                         <div className="flex items-center space-x-4">
                             <div className="w-2/5">
                                 <h1 className="font-grotesk font-bold text-[#183B56] text-5xl mb-8 leading-tight">
-                                    Number #1,<br />Southern Asia<br />Digital Product Agency
+                                    Empowering Your Business with Digital Solutions
                                 </h1>
-                                <p className="font-sans text-base text-[#5A7184] mb-10 leading-relaxed">We bring the results while helping you achieve cost and time savings without taking on risk or management overhead.</p>
+                                <p className="font-sans text-base text-[#5A7184] mb-10 leading-relaxed">We build high-performance websites, custom web applications, and mobile apps to enhance user experience and drive growth.</p>
                                 <Link
                                     href={""}
                                     className="font-bold bg-[#0a0cc3] text-white px-10 py-4 rounded-lg text-lg"
                                 >
                                     See Our Portfolio
                                 </Link>
-                                <Link href={""}>
-                                    <Image
-                                        src={down}
-                                        alt=""
-                                        className="mt-16"
-                                    />
-                                </Link>
+                                <div className="flex mt-14 space-x-16 items-center">
+                                    <div className="flex items-center">
+                                        <h1 className="font-ubuntu text-[#183B56] font-bold text-6xl me-4 counter" data-value="8">0</h1>
+                                        <p className="font-ubuntu text-[#5A7184] text-base">Clients</p>
+                                    </div>
+                                    <div className="flex items-center">
+                                        <h1 className="font-ubuntu text-[#183B56] font-bold text-6xl me-4 counter flex" data-value="10">0</h1>
+                                        <p className="font-ubuntu text-[#5A7184] text-base">Website<br />Created</p>
+                                    </div>
+                                </div>
                             </div>
                             <div className="w-3/5 flex justify-end">
                                 <Lottie
@@ -69,7 +106,7 @@ export default function Content() {
                             <h1 className="font-grotesk text-4xl font-bold text-[#183B56] w-2/3 leading-tight">We&rsquo;ve Worked with them, We Trust Each Other</h1>
                         </div>
                         <div className="w-1/2">
-                            <p className="text-base text-[#5A7184] w-2/3 leading-relaxed">Our team provides high-level creative education to a global audience of students, educators, and entrepreneurs all over the world</p>
+                            <p className="text-base text-[#5A7184] w-2/3 leading-relaxed">Our team has built high-performing websites, scalable web applications, and mobile apps for businesses across various industries.</p>
                         </div>
                     </div>
 
@@ -211,21 +248,24 @@ export default function Content() {
                         </div>
                     </div>
 
-                    <div className="lg:grid lg:grid-cols-3 lg:gap-6 grid grid-cols-2 gap-4">
+                    <div className="lg:grid lg:grid-cols-3 lg:gap-6 grid grid-cols-2 gap-4 mt-12">
                         {
                             projects.slice(0, 6).map((project: any) => (
-                                <div key={project.id} className="flex flex-col h-full">
-                                    <div className="bg-[#262626] lg:py-8 lg:px-8 py-4 px-3 lg:rounded-[30px] rounded-[20px] flex-1">
+                                <div key={project.id} className="flex flex-col h-full border-2 rounded-xl">
+                                    <div>
                                         <Image
                                             src={project.src}
                                             alt={`job ${project.id}`}
                                             width={0}
                                             height={0}
-                                            className="mb-4 rounded-lg"
+                                            className="rounded-t-xl"
+                                            quality={10}
                                         />
-                                        <p className="text-white lg:text-2xl text-sm font-medium mb-2">{project.title}</p>
-                                        <p className="mb-1 lg:text-lg text-xs text-[#888888]">{project.country}</p>
-                                        <Link href={project.link} className="text-[#65C8C1] lg:text-lg text-sm">Visit site</Link>
+                                        <div className="px-10 py-6">
+                                            <p className="text-[#183B56] lg:text-2xl text-sm font-bold mb-1 font-grotesk">{project.title}</p>
+                                            <p className="mb-2 lg:text-lg text-xs text-[#888888]">{project.country}</p>
+                                            <Link href={project.link} className="text-[#0a0cc3] text-lg">Visit site &rarr;</Link>
+                                        </div>
                                     </div>
                                 </div>
                             ))
@@ -234,10 +274,71 @@ export default function Content() {
                 </div>
             </section>
 
+            <section>
+                <div className="max-w-7xl mx-auto pt-10 pb-20">
+                    <div>
+                        <h1 className="text-[#0a0cc3] font-semibold mb-8 tracking-widest">TESTIMONIAL</h1>
+                        <h1 className="font-grotesk text-4xl font-bold text-[#183B56] w-2/3 leading-tight">What People Say About Us</h1>
+                    </div>
+
+                    <div className="mt-10 mb-5">
+                        <Swiper
+                            modules={[Pagination]}
+                            spaceBetween={30}
+                            slidesPerView={2}
+                            pagination={{ clickable: true }}
+                        >
+                            {testimonials.map((testimonial) => (
+                                <SwiperSlide key={testimonial.id}>
+                                    <div className="mb-20 border-2 rounded-lg border-[#E5EAF4] py-10 px-12 min-h-[300px] justify-between">
+                                        <div className="flex items-center">
+                                            <Image
+                                                src={testimonial.avatar}
+                                                alt={testimonial.name}
+                                                className="rounded-full border-gray-300 me-6"
+                                                width={80}
+                                                height={80}
+                                            />
+                                            <div>
+                                                <p className="text-2xl font-bold font-grotesk text-[#183B56] mb-1">{testimonial.name}</p>
+                                                <p className="text-[#5A7184]">{testimonial.work}</p>
+                                            </div>
+                                        </div>
+                                        <div className="mt-6">
+                                            <p className="text-[#5A7184] text-lg">{testimonial.text}</p>
+                                        </div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <div className="bg-[#0a0cc3] relative">
+                    <div className="max-w-7xl mx-auto py-16 flex flex-col justify-center items-center">
+                        <h1 className="text-white font-grotesk text-5xl font-bold mb-8 z-40">We&apos;re Ready for a Challenging Project</h1>
+                        <p className="text-white text-lg">Send us your brief and tell your project too. We are ready to help all you need</p>
+                        <Link
+                            href={""}
+                            className="font-bold bg-white text-[#0a0cc3] px-10 py-3 rounded-lg text-lg mt-16"
+                        >
+                            Let&apos;s Discuss it!
+                        </Link>
+                    </div>
+                    <Image
+                        src={bullet1}
+                        alt=""
+                        className="absolute top-0 right-0 z-0"
+                    />
+                </div>
+            </section>
+
             <FloatingWhatsApp
                 phoneNumber="6285928953264"
                 accountName={"Lumibyte"}
-                avatar="/avatar.png"
+                avatar="/png/avatar.png"
                 allowEsc
             />
 
