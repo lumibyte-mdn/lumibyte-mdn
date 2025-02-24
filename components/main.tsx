@@ -31,27 +31,27 @@ export default function Content() {
     const testimonials = testimoni
 
     useEffect(() => {
-        const counters = document.querySelectorAll('.counter');
-        counters.forEach((counter) => {
-            // Persempit tipe elemen menjadi HTMLElement
-            const element = counter as HTMLElement;
-
-            const endValue = parseInt(element.dataset.value || '0', 10);
-
-            gsap.fromTo(
-                element,
-                { innerText: 0 },
-                {
-                    innerText: endValue,
-                    duration: 2, // durasi animasi (detik)
-                    ease: 'power2.out',
-                    snap: { innerText: 1 },
-                    onUpdate: function () {
-                        element.innerText = Math.ceil(parseFloat(element.innerText || '0')).toString(); // Menampilkan angka bulat
-                    },
-                }
-            );
-        });
+        if (typeof window !== 'undefined') {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach((counter) => {
+                const element = counter as HTMLElement;
+                const endValue = parseInt(element.dataset.value || '0', 10);
+    
+                gsap.fromTo(
+                    element,
+                    { innerText: 0 },
+                    {
+                        innerText: endValue,
+                        duration: 2, 
+                        ease: 'power2.out',
+                        snap: { innerText: 1 },
+                        onUpdate: function () {
+                            element.innerText = Math.ceil(parseFloat(element.innerText || '0')).toString(); 
+                        },
+                    }
+                );
+            });
+        }
     }, []);
 
     return (
