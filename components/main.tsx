@@ -387,7 +387,7 @@ export default function Content() {
                         <h1 className="text-white font-grotesk lg:text-5xl text-4xl font-bold lg:mb-8 mb-6 z-40 text-center leading-normal">We&apos;re Ready for a Challenging Project</h1>
                         <p className="text-white lg:text-lg text-base text-center">Send us your brief and tell your project too. We are ready to help all you need</p>
                         <Link
-                            href={""}
+                            href={"https://wa.me/6285928953264"}
                             className="font-bold bg-white text-[#0a0cc3] px-10 py-3 rounded-lg text-lg lg:mt-16 mt-12 z-50"
                         >
                             Let&apos;s Discuss it!

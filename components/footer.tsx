@@ -28,7 +28,6 @@ export default function Footer() {
                                 <div className="flex flex-col space-y-5">
                                     <Link href={""} className="text-[#959EAD] hover:text-white">Home</Link>
                                     <Link href={""} className="text-[#959EAD] hover:text-white">Project</Link>
-                                    <Link href={""} className="text-[#959EAD] hover:text-white">Services</Link>
                                     <Link href={""} className="text-[#959EAD] hover:text-white">Contact</Link>
                                 </div>
                             </div>
@@ -54,7 +53,7 @@ export default function Footer() {
                                             alt=""
                                             className="me-2"
                                         />
-                                        <Link href={""} className="text-[#959EAD] hover:text-white">@lumibyte.id</Link>
+                                        <Link href={"https://www.instagram.com/lumibyte.id"} className="text-[#959EAD] hover:text-white">@lumibyte.id</Link>
                                     </div>
                                     <div className="flex">
                                         <Image
@@ -62,7 +61,7 @@ export default function Footer() {
                                             alt=""
                                             className="me-2"
                                         />
-                                        <Link href={""} className="text-[#959EAD] hover:text-white">+62 859-2895-3264</Link>
+                                        <Link href={"https://wa.me/6285928953264"} className="text-[#959EAD] hover:text-white">+62 859-2895-3264</Link>
                                     </div>
                                     <div className="flex">
                                         <Image
@@ -70,7 +69,7 @@ export default function Footer() {
                                             alt=""
                                             className="me-2"
                                         />
-                                        <Link href={""} className="text-[#959EAD] hover:text-white">lumibyte.mdn@gmail.com</Link>
+                                        <Link href={"https://mail.google.com/mail/u/0/?pli=1#inbox?compose=jrjtXLDgQSBkxvtgZbLZFqbVBTPHVVCmTRkSMKdFlvmswLrRntgnpqKPvhHsTnNKVbfjVXNw"} className="text-[#959EAD] hover:text-white">lumibyte.mdn@gmail.com</Link>
                                     </div>
                                 </div>
                             </div>
@@ -99,7 +98,6 @@ export default function Footer() {
                                     <div className="flex flex-col space-y-5">
                                         <Link href={""} className="text-[#959EAD] hover:text-white">Home</Link>
                                         <Link href={""} className="text-[#959EAD] hover:text-white">Project</Link>
-                                        <Link href={""} className="text-[#959EAD] hover:text-white">Services</Link>
                                         <Link href={""} className="text-[#959EAD] hover:text-white">Contact</Link>
                                     </div>
                                 </div>
@@ -126,7 +124,7 @@ export default function Footer() {
                                             alt=""
                                             className="me-2"
                                         />
-                                        <Link href={""} className="text-[#959EAD] hover:text-white">@lumibyte.id</Link>
+                                        <Link href={"https://www.instagram.com/lumibyte.id"} className="text-[#959EAD] hover:text-white">@lumibyte.id</Link>
                                     </div>
                                     <div className="flex">
                                         <Image
@@ -134,7 +132,7 @@ export default function Footer() {
                                             alt=""
                                             className="me-2"
                                         />
-                                        <Link href={""} className="text-[#959EAD] hover:text-white">+62 859-2895-3264</Link>
+                                        <Link href={"https://wa.me/6285928953264"} className="text-[#959EAD] hover:text-white">+62 859-2895-3264</Link>
                                     </div>
                                     <div className="flex">
                                         <Image
@@ -142,7 +140,7 @@ export default function Footer() {
                                             alt=""
                                             className="me-2"
                                         />
-                                        <Link href={""} className="text-[#959EAD] hover:text-white">lumibyte.mdn@gmail.com</Link>
+                                        <Link href={"https://mail.google.com/mail/u/0/?pli=1#inbox?compose=jrjtXLDgQSBkxvtgZbLZFqbVBTPHVVCmTRkSMKdFlvmswLrRntgnpqKPvhHsTnNKVbfjVXNw"} className="text-[#959EAD] hover:text-white">lumibyte.mdn@gmail.com</Link>
                                     </div>
                                 </div>
                             </div>

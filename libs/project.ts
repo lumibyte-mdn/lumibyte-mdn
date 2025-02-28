@@ -12,7 +12,7 @@ const project = [
         title: "PT. Tujuh Anugrah Abadi",
         country: "Indonesia ( Surabaya )",
         src: tujuhaa,
-        link : "https://tujuhanugrahabadi-8gyxdp8ju-raynaldos-projects.vercel.app/" //link sementara
+        link : "https://tujuhanugrahabadi.vercel.app/" //link sementara
     },
 
     {
