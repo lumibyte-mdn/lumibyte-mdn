@@ -20,6 +20,8 @@ export const metadata: Metadata = {
   description: "Expert Website & App Development – High-Performance Websites, Custom Web Apps, and Scalable Mobile Solutions to Boost User Engagement and Business Growth.",
   keywords: [
     "Lumibyte",
+    "Buat Website Medan",
+    "Website Medan",
     "Lumibyte Medan",
     "Website Development",
     "App Development",
@@ -28,7 +30,7 @@ export const metadata: Metadata = {
     "Buat Website",
     "Buat Aplikasi Mobile",
     "Jasa buat website",
-    "Jasa buat website",
+    "Jasa buat aplikasi Mobile",
     "Agency Website",
     "Jasa buat Aplikasi"
   ],
