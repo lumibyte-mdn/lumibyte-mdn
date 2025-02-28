@@ -37,7 +37,7 @@ export default function Navigationbar() {
 
             <div className="lg:hidden">
                 <div className="py-4 md:py-8 relative flex justify-between items-center pe-3 ps-4 bg-[#FAFDFF] md:mx-6 ">
-                    <Link href={"/"}><Image src={logo} alt="" width={140} className="ms-2 md:w-48" /></Link>
+                    <Link href={"/"}><Image src={logo} alt="Logo Lumibyte" width={140} className="ms-2 md:w-48" loading="lazy"/></Link>
 
                     {/* Hamburger button */}
                     <button
@@ -71,18 +71,21 @@ export default function Navigationbar() {
                     <div className="space-y-1 px-6 py-5 bg-[#183B56]">
                         <Link
                             href="/"
+                            onClick={() => setIsOpen(false)}
                             className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium z-50 relative cursor-pointer"
                         >
                             Home
                         </Link>
                         <Link
                             href="/project"
+                            onClick={() => setIsOpen(false)}
                             className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >
                             Project
                         </Link>
                         <Link
                             href="/contact"
+                            onClick={() => setIsOpen(false)}
                             className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >
                             Contact

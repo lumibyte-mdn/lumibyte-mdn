@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.lumibyte-mdn.com
+
+# Sitemaps
+Sitemap: https://www.lumibyte-mdn.com/sitemap.xml

@@ -176,6 +176,7 @@ export default function Content() {
                                         alt={`Logo ${logo.id}`}
                                         height={0}
                                         className="grayscale hover:grayscale-0 transition-all duration-300 lg:w-[110px] w-[80px]"
+                                        loading="lazy"
                                     />
                                 </div>
                             ))}
@@ -202,8 +203,9 @@ export default function Content() {
                                 <div className="lg:flex lg:space-x-4">
                                     <Image
                                         src={branding}
-                                        alt=""
+                                        alt="Gambar Lumibyte"
                                         className="border-2 border-dashed w-12 h-12 mb-6 lg:mb-0"
+                                        loading="lazy"
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">SEO</h1>
@@ -215,8 +217,9 @@ export default function Content() {
                                 <div className="lg:flex lg:space-x-4">
                                     <Image
                                         src={webs}
-                                        alt=""
+                                        alt="Gambar Lumibyte"
                                         className="border-2 border-dashed w-12 h-12 mb-6 lg:mb-0"
+                                        loading="lazy"
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">Website Application</h1>
@@ -228,8 +231,9 @@ export default function Content() {
                                 <div className="lg:flex lg:space-x-4">
                                     <Image
                                         src={uiux}
-                                        alt=""
+                                        alt="Gambar Lumibyte"
                                         className="border-2 border-dashed w-12 h-12 mb-6 lg:mb-0"
+                                        loading="lazy"
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">UI/UX Design</h1>
@@ -241,8 +245,9 @@ export default function Content() {
                                 <div className="lg:flex lg:space-x-4">
                                     <Image
                                         src={mobile}
-                                        alt=""
+                                        alt="Gambar Lumibyte"
                                         className="border-2 border-dashed w-12 h-12 mb-6 lg:mb-0"
+                                        loading="lazy"
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">Mobile Development</h1>
@@ -254,8 +259,9 @@ export default function Content() {
                                 <div className="lg:flex lg:space-x-4">
                                     <Image
                                         src={landingpage}
-                                        alt=""
+                                        alt="Gambar Lumibyte"
                                         className="border-2 border-dashed w-12 h-12 mb-6 lg:mb-0"
+                                        loading="lazy"
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">Landing Page</h1>
@@ -267,8 +273,9 @@ export default function Content() {
                                 <div className="lg:flex lg:space-x-4">
                                     <Image
                                         src={workshop}
-                                        alt=""
+                                        alt="Gambar Lumibyte"
                                         className="border-2 border-dashed w-12 h-12 mb-6 lg:mb-0"
+                                        loading="lazy"
                                     />
                                     <div>
                                         <h1 className="font-grotesk text-2xl font-bold text-[#183B56] leading-tight mb-3">Tech Workshop</h1>
@@ -314,6 +321,7 @@ export default function Content() {
                                             height={0}
                                             className="rounded-t-xl"
                                             quality={10}
+                                            loading="lazy"
                                         />
                                         <div className="lg:px-10 px-4 lg:py-6 py-4">
                                             <p className="text-[#183B56] lg:text-2xl text-2xl font-bold lg:mb-1 mb-2 font-grotesk">{project.title}</p>
@@ -328,7 +336,7 @@ export default function Content() {
 
                     <div className="lg:w-1/2 lg:text-right lg:hidden mt-14 text-center">
                         <Link
-                            href={""}
+                            href={"/project"}
                             className="border-2 py-2 px-6 rounded-md border-[#0a0cc3] text-[#0a0cc3] hover:bg-blue-50"
                         >
                             See More
@@ -363,6 +371,7 @@ export default function Content() {
                                             <Image
                                                 src={testimonial.avatar}
                                                 alt={testimonial.name}
+                                                loading="lazy"
                                                 className="rounded-full border-gray-300 lg:me-6 lg:w-20 w-24"
                                             />
                                             <div>
@@ -398,6 +407,7 @@ export default function Content() {
                             src={bullet1}
                             alt=""
                             className="absolute top-0 right-0 z-0"
+                            loading="lazy"
                         />
                     </div>
                 </div>

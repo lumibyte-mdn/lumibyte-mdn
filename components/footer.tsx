@@ -16,8 +16,9 @@ export default function Footer() {
                             <div>
                                 <Image
                                     src={white}
-                                    alt=""
+                                    alt="logo Lumibyte"
                                     className="w-48"
+                                    loading="lazy"
                                 />
                                 <p className="mt-8 text-[#5A7184]">Emerald Garden Residential No.B5,
                                     Jln. Kwala Begumit, Medan Barat, Medan City, North Sumatra 20234</p>
