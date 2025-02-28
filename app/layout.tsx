@@ -66,7 +66,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="robots" content="index, follow" />
-        <meta name="google-site-verification" content="YOUR_GOOGLE_VERIFICATION_CODE" />
+        <meta name="google-site-verification" content="oAV6rpIDlyqrxmJt_GU7BcQmuSz4h6heS2b9B9ho6Is" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
