@@ -39,13 +39,13 @@ export default function Project() {
 
     return (
         <>
-            <div className="max-w-7xl mx-auto pt-10 pb-24">
+            <div className="lg:max-w-7xl lg:mx-auto pt-10 lg:pb-24 pb-20 mx-6">
                 <div className="flex flex-col justify-center items-center">
-                    <h1 className="font-grotesk text-4xl font-bold text-[#183B56] leading-tight mb-4">Our Projects</h1>
-                    <p className="text-base text-[#5A7184] leading-relaxed">These are some of the projects that we did for our clients.</p>
+                    <h1 className="font-grotesk lg:text-4xl text-3xl font-bold text-[#183B56] leading-tight mb-4">Our Projects</h1>
+                    <p className="text-base text-[#5A7184] leading-relaxed text-center">These are some of the projects that we did for our clients.</p>
                 </div>
 
-                <div className="lg:grid lg:grid-cols-3 lg:gap-6 grid grid-cols-2 gap-4 mt-16">
+                <div className="lg:grid lg:grid-cols-3 lg:gap-6 lg:mt-12 mt-10 lg:space-y-0 space-y-6">
                     {
                         projects.map((project: any) => (
                             <div key={project.id} className="flex flex-col h-full border-2 rounded-xl">
@@ -58,10 +58,10 @@ export default function Project() {
                                         className="rounded-t-xl"
                                         quality={10}
                                     />
-                                    <div className="px-10 py-6">
-                                        <p className="text-[#183B56] lg:text-2xl text-sm font-bold mb-1 font-grotesk">{project.title}</p>
-                                        <p className="mb-2 lg:text-lg text-xs text-[#888888]">{project.country}</p>
-                                        <Link href={project.link} className="text-[#0a0cc3] text-lg hover:text-[#183B56]">Visit site &rarr;</Link>
+                                    <div className="lg:px-10 px-4 lg:py-6 py-4">
+                                        <p className="text-[#183B56] lg:text-2xl text-2xl font-bold lg:mb-1 mb-2 font-grotesk">{project.title}</p>
+                                        <p className="mb-2 lg:text-lg text-sm text-[#888888]">{project.country}</p>
+                                        <Link href={project.link} className="text-[#0a0cc3] lg:text-lg text-base hover:text-[#183B56]">Visit site &rarr;</Link>
                                     </div>
                                 </div>
                             </div>

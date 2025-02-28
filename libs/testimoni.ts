@@ -1,4 +1,5 @@
 import testi1 from "@/public/png/testi1.jpg"
+import testi2 from "@/public/png/testi2.jpg"
 
 const testimoni = [
     {
@@ -10,18 +11,10 @@ const testimoni = [
     },
     {
         id: 2,
-        name: 'Jane Smith',
-        avatar: testi1,
-        text: '“ Their UI/UX skills and experience, were key to identifying potential friction points within our Business Processes, which they fixed or streamlined beautifull ”.',
-        work: 'Founder Durian Tomang Elok'
-    },
-
-    {
-        id: 3,
-        name: 'Jane Smith',
-        avatar: testi1,
-        text: '“ Their UI/UX skills and experience, were key to identifying potential friction points within our Business Processes, which they fixed or streamlined beautifull ”.',
-        work: 'Founder Durian Tomang Elok'
+        name: 'Michael Chang Soetijono',
+        avatar: testi2,
+        text: '“ The landing page is visually stunning and has significantly boosted our event bookings. The exclusive design, clean layout, and smooth user experience are outstanding. Since launch, our inquiries have grown rapidly! ”.',
+        work: 'Founder Tamo Venue'
     },
 ]
 
