@@ -11,7 +11,6 @@ import workshop from "@/public/svg/workshop.svg"
 import landingpage from "@/public/svg/landingpage.svg"
 import webs from "@/public/svg/website.svg"
 import bullet1 from "@/public/svg/bullet1.svg"
-import b2 from "@/public/svg/bullet2.svg"
 import ani1 from "@/public/lottie/ani1.json"
 
 import 'swiper/css';
@@ -99,7 +98,7 @@ export default function Content() {
                                     </h1>
                                     <p className="font-sans text-base text-[#5A7184] lg:mb-14 mb-14 lg:leading-relaxed leading-relaxed">We build high-performance websites, custom web applications, and mobile apps to enhance user experience and drive growth.</p>
                                     <Link
-                                        href={""}
+                                        href={"/project"}
                                         className="font-bold bg-[#0a0cc3] text-white px-10 py-4 rounded-lg text-lg hover:bg-blue-950"
                                     >
                                         See Our Portfolio
@@ -294,7 +293,7 @@ export default function Content() {
                             </div>
                             <div className="lg:w-1/2 lg:text-right lg:block hidden">
                                 <Link
-                                    href={""}
+                                    href={"/project"}
                                     className="border-2 py-2 px-4 rounded-md border-[#0a0cc3] text-[#0a0cc3] hover:bg-blue-50"
                                 >
                                     See More

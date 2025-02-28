@@ -28,7 +28,6 @@ export default function Navigationbar() {
                             <div className="space-x-10">
                                 <Link href={"/"} className="text-[#183B56] font-semibold font-sans">Home</Link>
                                 <Link href={"/project"} className="text-[#183B56] font-semibold font-sans">Project</Link>
-                                <Link href={""} className="text-[#183B56] font-semibold font-sans">Services</Link>
                                 <Link href={"/contact"} className="text-[#183B56] font-semibold font-sans">Contact</Link>
                             </div>
                         </div>
@@ -81,12 +80,6 @@ export default function Navigationbar() {
                             className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                         >
                             Project
-                        </Link>
-                        <Link
-                            href="/"
-                            className="text-white hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                        >
-                            Services
                         </Link>
                         <Link
                             href="/contact"

@@ -12,7 +12,7 @@ const project = [
         title: "PT. Tujuh Anugrah Abadi",
         country: "Indonesia ( Surabaya )",
         src: tujuhaa,
-        link : "https://www.skyview.co.id/"
+        link : "https://tujuhanugrahabadi-8gyxdp8ju-raynaldos-projects.vercel.app/" //link sementara
     },
 
     {
@@ -20,7 +20,7 @@ const project = [
         title: "Yanks & Brits English Institute",
         country: "Indonesia ( Medan )",
         src: yanks,
-        link : "https://www.skyview.co.id/"
+        link : "http://yanksbrits.pythonanywhere.com"
     },
 
     {
@@ -28,7 +28,7 @@ const project = [
         title: "Velure Parfume",
         country: "Indonesia ( Medan )",
         src: velure,
-        link : "https://www.skyview.co.id/"
+        link : "https://velure-perfume-brown.vercel.app/" //link sementara
     },
 
     {
@@ -44,7 +44,7 @@ const project = [
         title: "PT. Aneka Sari Utama",
         country: "Indonesia ( Medan )",
         src: ansama,
-        link : "https://www.skyview.co.id/"
+        link : "https://ansama.co.id/"
     },
 
     {
@@ -52,7 +52,7 @@ const project = [
         title: "Mutual Property",
         country: "Indonesia ( Medan )",
         src: mutual,
-        link : "https://www.skyview.co.id/"
+        link : "https://www.mutualproperty.co.id/"
     },
 
     {
@@ -60,7 +60,7 @@ const project = [
         title: "Sugar Baby Medan",
         country: "Indonesia ( Medan )",
         src: sugarbaby,
-        link : "https://www.skyview.co.id/"
+        link : "http://sugarbaby.co.id/"
     },
 ]
 

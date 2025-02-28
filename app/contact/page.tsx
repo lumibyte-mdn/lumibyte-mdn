@@ -48,7 +48,7 @@ export default function Contact() {
     };
     return (
         <>
-            <div className="lg:max-w-7xl lg:mx-auto pt-5 mb-20 mx-6">
+            <div className="lg:max-w-7xl lg:mx-auto pt-5 lg:mb-20 mb-12 mx-6">
                 <div className="lg:flex lg:mt-12 mt-6 lg:space-x-20 items-center">
                     <div className="lg:w-1/2">
                         <p className="font-sans text-base text-[#183B56] mb-2 leading-relaxed text-center lg:text-left">- Get in touch -</p>
@@ -195,22 +195,22 @@ export default function Contact() {
                     <div className="lg:flex lg:space-x-4 mt-10">
                         <div className="lg:w-1/2">
                             <h1 className="font-bold text-[#183B56] text-lg mb-3">Call Center</h1>
-                            <p className="font-sans text-base text-[#5A7184] mb-14 leading-relaxed">+62 859-2895-3264</p>
+                            <p className="font-sans text-base text-[#5A7184] lg:mb-14 mb-8 leading-relaxed">+62 859-2895-3264</p>
                         </div>
 
                         <div className="lg:w-1/2">
                             <h1 className="font-bold text-[#183B56] text-lg mb-3">Our Location</h1>
-                            <p className="font-sans text-base text-[#5A7184] mb-14 leading-relaxed">Emerald Garden Residential No.B5, North Sumatra 20234</p>
+                            <p className="font-sans text-base text-[#5A7184] lg:mb-14 mb-8 leading-relaxed">Emerald Garden Residential No.B5, North Sumatra 20234</p>
                         </div>
                     </div>
 
                     <div className="lg:flex lg:space-x-4">
                         <div className="lg:w-1/2">
                             <h1 className="font-bold text-[#183B56] text-lg mb-3">Email</h1>
-                            <p className="font-sans text-base text-[#5A7184] leading-relaxed">lumibyte.mdn@gmail.com</p>
+                            <p className="font-sans text-base text-[#5A7184] mb-8 lg:mb-0 leading-relaxed">lumibyte.mdn@gmail.com</p>
                         </div>
 
-                        <div className="w-1/2">
+                        <div className="lg:w-1/2">
                             <h1 className="font-bold text-[#183B56] text-lg mb-3">Social Network</h1>
                             <div className="flex items-center">
                                 <Image
