@@ -12,7 +12,7 @@ const project = [
         title: "PT. Tujuh Anugrah Abadi",
         country: "Indonesia ( Surabaya )",
         src: tujuhaa,
-        link : "https://7aa.com/"
+        link : "https://7anugrah.com/"
     },
 
     {
